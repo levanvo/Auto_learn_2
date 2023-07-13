@@ -1,0 +1,29 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "Car-1",
+      "price": 100
+    },
+    {
+      "id": 2,
+      "name": "Car-2",
+      "price": 200
+    },
+    {
+      "id": 3,
+      "name": "Car-3",
+      "price": 300
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Name-1"
+    },
+    {
+      "id": 2,
+      "name": "Name-2"
+    }
+  ]
+}
