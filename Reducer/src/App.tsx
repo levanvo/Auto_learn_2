@@ -54,7 +54,7 @@ const App = () => {
       <div className="w-[500px] bg-gray-500 rounded-md ml-[34vw] mt-5">
         <p className='text-2xl text-center text-gray-200 underline mb-5'>Dashboard</p>
         <div className="flex justify-center">
-          <button className='w-96 ' onClick={()=>AddPr({name:"Vo1"})}>Add Products</button>
+          <button className='w-96 ' onClick={()=>AddPr({name:`SP-${Math.round(Math.random()*10)}`,price:Math.floor(Math.random()*999)})}>Add Products</button>
         </div>
         <table className='w-[500px] text-center mx-auto'>
           <thead className='border-b border-white'>
@@ -73,7 +73,7 @@ const App = () => {
                 <td>{items?.price}</td>
                 <td>
                   <button onClick={()=>Remove({id:items.id})}>Remove</button>
-                  <button onClick={()=>Update({name:"Vo2",id:items.id})}>Update</button>
+                  <button onClick={()=>Update({name:`${items.name}-updated`,price:Math.floor(Math.random()*999),id:items.id})}>Update</button>
                 </td>
               </tr>
             ))}
