@@ -1,0 +1,69 @@
+<div class="container">
+  <h1 class="text-center text-2xl text-orange-500">{{ title }}</h1>
+  <hr />
+  {{ status ? "On" : "Off" }}
+  <button class="w-44 h-8 bg-gray-200 hover:bg-gray-300" (click)="toggle()">Toggle</button>
+  <hr />
+  <div class="flex justify-around">
+    <div class="">
+      <label for="">Input: <input class="border outline-0 focus:border-sky-500" type="text"
+          (input)="setValue($event)" /></label>
+      <span>Output: {{ valueInput }}</span>
+    </div>
+
+    <a routerLink="addProduct"><button class="btn btn-warning">Add Product</button></a>
+  </div>
+
+  <table class="table table-bordered text-center">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ảnh</th>
+        <th>Tên</th>
+        <th>Giá</th>
+        <th>Handle</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="products && products.length">
+      <tr *ngFor="let product of products; index as i">
+        <td>{{ i + 1 }}</td>
+        <td><img src="{{ product.img }}" /></td>
+        <td>{{ product.name }}</td>
+        <td>${{ product.price }}</td>
+        <td>
+          <button class="btn btn-danger " (click)="removeItem(product.id)">
+            Remove
+          </button>
+          <a routerLink="updatePr/{{product.id}}"><button class="btn btn-primary ">
+              Update
+            </button></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<router-outlet />
+<!-- <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Ảnh</th>
+          <th>Tên sản phẩm</th>
+          <th>Giá</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngIf="products && products.length">
+        <tr *ngFor="let product of products; index as i">
+          <td>{{ i + 1 }}</td>
+          <td><img src="{{ product.img }}" /></td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="removeItem(product.id)">
+              xóa
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table> -->

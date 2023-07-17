@@ -1,0 +1,21 @@
+<p class="text-center text-2xl font-bold ">update-pr works!</p>
+<form (ngSubmit)="onHandleSubmit()">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="product.name"
+        name="name"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="product.price"
+        name="price"
+      />
+    </div>
+    {{ product | json }}
+    <button class="btn btn-info border-none bg-gray-500 text-white" type="submit">Update</button>
+  </form>

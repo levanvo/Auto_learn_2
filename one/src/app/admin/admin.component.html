@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <div class="flex w-[1300px] mx-auto space-x-10">
+        <div class="w-[400px] bg-gray-200 h-96">
+            <h2 class="text-xl w-fit mx-auto text-gray-400 hover:text-gray-700 font-bold"><a routerLink="dashboard">Dash Board</a></h2>
+            <h2 class="text-xl w-fit mx-auto text-gray-400 hover:text-gray-700 font-bold"><a routerLink="setting">Setting</a></h2>
+        </div>
+        <div class="w-[960px] bg-gray-200 h-96">
+            <router-outlet />
+        </div>
+    </div>
+</body>
+</html>
