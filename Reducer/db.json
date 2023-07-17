@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "name": "Vo2",
+      "id": 7
+    },
+    {
+      "name": "Vo1",
+      "id": 8
+    },
+    {
+      "name": "Vo2",
+      "id": 9
+    },
+    {
+      "name": "Vo1",
+      "id": 10
+    },
+    {
+      "name": "Vo1",
+      "id": 11
+    },
+    {
+      "name": "Vo1",
+      "id": 12
+    },
+    {
+      "name": "Vo1",
+      "id": 13
+    },
+    {
+      "name": "Vo1",
+      "id": 14
+    },
+    {
+      "name": "Vo1",
+      "id": 16
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "VoLe",
+      "pass":"123"
+    },
+    {
+      "id": 2,
+      "name": "HungNguyen",
+      "pass":"321"
+    }
+  ]
+}
