@@ -1,0 +1,35 @@
+import React from 'react'
+import { instance } from "../Repositories/Api"
+
+
+export const Action_appTS = () => async (dispatch: any) => {
+    dispatch({ type: "product/fetching" }) // isloading true
+    try {
+        // await pause(1000);
+        const data = await instance.get(`/products`);
+        dispatch({ type: "product/fetchingSuccess", payload: data });
+    } catch (error: any) {
+        dispatch({ type: "product/fetchingFailed", payload: error.message })
+    } finally {
+        dispatch({ type: "product/fetchingFinally" })
+    }
+}
+
+export const addProduct1 = (product: any) => async (dispatch: any) => {
+    try {
+        const data = await instance.post(`/products`, product);
+        dispatch({ type: "product/addProduct", payload: data });
+    } catch (error: any) { } finally { }
+};
+export const removeProduct1 = (product: any) => async (dispatch: any) => {
+    try {
+        await instance.delete(`/products/${product.id}`);
+        dispatch({ type: "product/deleteProduct", payload: product.id });
+    } catch (error: any) { } finally { }
+};
+export const updateProduct1 = (product: any) => async (dispatch: any) => {
+    try {
+        const data = await instance.put(`/products/${product.id}`, product);
+        dispatch({ type: "product/updateProduct", payload: data });
+    } catch (error: any) { } finally { }
+};
