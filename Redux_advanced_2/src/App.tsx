@@ -26,13 +26,23 @@ function App() {
   }, []);
 
   const AddProduct = async () => {
-    const data = await instance.post("/products", {
+    if(products.length<1){
+      const data = await instance.post("/products", {
+      id: 1,
+      name: "Product-" + Math.floor(Math.random() * 33),
+      price: Math.floor(Math.random() * 9999),
+      available: Math.floor(Math.random() * 99),
+    });
+    dispatch({ type: "addProduct", payload: data });
+    }else{
+      const data = await instance.post("/products", {
       id: products[products.length - 1].id + 1,
       name: "Product-" + Math.floor(Math.random() * 33),
       price: Math.floor(Math.random() * 9999),
       available: Math.floor(Math.random() * 99),
     });
     dispatch({ type: "addProduct", payload: data });
+    }
   };
   const UpdateProduct = async (data: any) => {
     const data2 = await instance.put(`/products/${data.id}`, {
