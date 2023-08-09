@@ -1,0 +1,55 @@
+{
+  "products": [
+    {
+      "id": 13,
+      "name": "Product-19",
+      "price": 6006,
+      "available": 79
+    },
+    {
+      "id": 21,
+      "name": "Product-0 - updated",
+      "price": 5787,
+      "available": 6
+    },
+    {
+      "id": 22,
+      "name": "Product-27",
+      "price": 9650,
+      "available": 14
+    },
+    {
+      "id": 23,
+      "name": "Product-14",
+      "price": 958,
+      "available": 11
+    },
+    {
+      "id": 24,
+      "name": "Product-16",
+      "price": 5091,
+      "available": 90
+    },
+    {
+      "id": 25,
+      "name": "Product-30",
+      "price": 5419,
+      "available": 77
+    },
+    {
+      "id": 26,
+      "name": "Product-14",
+      "price": 7695,
+      "available": 50
+    }
+  ],
+  "carts": [
+    {
+      "id": 26,
+      "name": "Product-14",
+      "price": 7695,
+      "available": 50,
+      "quantity": 1
+    }
+  ]
+}
