@@ -1,0 +1,29 @@
+<p class="text-center text-2xl font-bold ">layout-dashboard works!</p>
+<div class="" *ngFor="let show of getAllProducts; index as i">
+    <a class="hover:text-blue-400" routerLink="product/{{show.id}}"><p>{{show.name}} and id: {{i}}</p></a>
+</div>
+<!-- <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ảnh</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody *ngIf="getAllProducts && getAllProducts.length">
+      <tr *ngFor="let product of getAllProducts; index as i">
+        <td>{{ i + 1 }}</td>
+        <td><img src="{{ product.img }}" /></td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="removeItem(product.id)">
+            xóa
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+<router-outlet />

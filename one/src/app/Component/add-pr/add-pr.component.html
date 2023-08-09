@@ -1,0 +1,8 @@
+<p class="text-center text-2xl font-bold ">add-pr works!</p>
+<form (ngSubmit)="onAddPr()" action="">
+    <p>Name:</p>
+    <input type="text" [(ngModel)]="data.name" name="name" id="">
+    <p>Price:</p>
+    <input type="text" [(ngModel)]="data.price" name="price" id="">
+    <button class="btn btn-primary">Add</button>
+</form>
